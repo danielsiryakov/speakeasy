@@ -12,6 +12,6 @@ def home():
 
 @app.route('/about')
 def about():
-    audio_file = open("../api/sample1.mp3", "rb")
+    audio_file = open("./api/sample1.mp3", "rb")
     transcript = openai.Audio.transcribe("whisper-1", audio_file)
     print(transcript)
